@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>OneTech Careers</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+		<style> #banner {
+			width: 100%;
+			height: 320;
+		}
+		#header {
+			color:lightcyan;
+		}
+		</style>
+	</head>
+	<body>
+		{% include 'navbar_advanced.html' %}
+		<div><img class="img-fluid mx-auto d-block" id="banner" src="static/cdg_darkbg_sm.jpg">
+			<h1 id="header" class="text-center mt-3 mb-4 carousel-caption"><b>[</b> {{company_name}} Careers <b>]</b> </h1>	
+		</div>
+		<div class="container">
+			<h2 class="text-center mt-3 mb-4"> About {{company_name}}</h2>
+			<div class="row mb-6">
+				<p class="lead col-6" > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<div class="col-md-6"><img class="img-responsive" style="height: 320px; width: 100%; border-radius: 4px;" src="http://127.0.0.1:5000/static/collab_pic.jpg">
+				</div>
+			</div>
+			<h2 class="text-center mt-3 mb-4" style="color:darkcyan"><u>Job Listings</u></h2>
+				<div>
+					{%for job in jobs%}
+					{% include 'job_item.html' %}
+					{% endfor %}
+				</div>
+			<div class="text-center">
+				<a href="mailto:dev.hoyte@gmail.com?subject=Job%20Inquiery%20&body=Your%20Name%3A%20%3Cinsert%20name%20here%3E%0D%0A%0D%0AMy%20question%3A%20%3Cinsert%20question(s)%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
+			</div>
+
+		</div>
+	</body>
+	{% include 'footer.html' %}
+
+</html>
