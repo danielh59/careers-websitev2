@@ -17,7 +17,8 @@ def job_listings():
 
 @app.route("/api/listings")
 def listings():
-      return jsonify(JOBS)
+      jobs = load_jobs_from_db()
+      return jsonify(jobs)
 
 print(__name__)
 if __name__ == "__main__":
