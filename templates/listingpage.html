@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OneTech Career: {{job.title}}s</title>
+		{% include 'bootstrap.html' %}
+	</head>
+	<body>
+		{% include 'navbar_advanced.html' %}
+		
+		<h2>  Job Title: </h2>
+		<h3> {{job.title}} </h3>
+		<h2> Location: <h2>
+		<h3> {{job.location}}</h3>
+		<h2> Salary: </h2>
+		<h3> {{job.currency}}{{"{:,}".format(job.salary) }} </h3>
+		<h2> Job Description: </h2>
+		<h3> {{job.responsibilities}}</h3>
+		<h2> Job Requirements: </h2>
+		<h3> {{job.requirements}} </h3>
+		{% include 'footer.html' %}
+	</body>
+</html>
