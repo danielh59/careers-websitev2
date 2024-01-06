@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>
+			Application Submitted
+			{% include 'bootstrap.html' %}
+		</title>
+	</head>
+	<body>
+		{% include 'navbar_advanced.html' %}
+		{% include 'banner.html' %}
+		<div class="container">
+			<p style="color: rgb(56, 66, 253)"> Your application for the role <b>{{job['title']}}</b> at OneTech has been has been submitted!</p>
+		
+			<b> Your Name: </b><br>
+			<div class="mb-2"> {{ application['full_name']}} </div>
+			
+			<b> Your Email: </b> <br>
+			<div class="mb-2"> {{application['email']}} </div>
+			
+			<b> Your Education: </b><br>
+			<div class="mb-2"> {{application['education']}} </div>
+
+			<b> Your Work Experience: </b><br>
+			<div class="mb-2"> {{application['work_experience']}} </div>
+			
+			<b> Your LinkedIn: </b><br>
+			<div class="mb-2"> {{application['linkedin_url']}} </div>
+			
+			<b> Resume: </b><br>
+			<div class="mb-2"> {{application['resume_url']}} </div>
+			{% include 'footer.html' %}
+		</div>
+	</body>
+</html>

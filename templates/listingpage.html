@@ -24,6 +24,7 @@
 			</ol>
 			<h4> Salary: </h2>
 			<p> {{job.currency}}{{"{:,}".format(job.salary) }} </p>
+			{% include 'application_form.html' %}
 		</div>
 		{% include 'footer.html' %}
 	</body>

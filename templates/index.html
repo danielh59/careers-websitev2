@@ -9,7 +9,16 @@
 	</head>
 	<body>
 		{% include 'navbar_advanced.html' %}
-		<p>Job openings</p>
+		{% include 'banner.html' %}
+
+		<div class="container">
+			<h1>Job openings</h1>
+			<div>
+				{%for job in jobs%}
+				{% include 'job_item.html' %}
+				{% endfor %}
+			</div>
+		</div>
 		{% include 'footer.html' %}
 
 	</body>
